@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://kit.fontawesome.com/bb687ed32c.js" crossorigin="anonymous"></script>
+    
+    <title>Portfolio2</title>
+  </head>
+  <body>
+    
+    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzheeUVAhHBYM4Xx4JiMuuVP5gnSIGXqjKw3A1O0WNfgiD7VXIVI0dU647N_4aYnZTR/exec URL'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    <div id="root"></div>
+    
+  </body>
+</html>

@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Open+Sans:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+/* 40px margin in left and padding of 20 pixels in left*/
+body{
+    background: #080808;
+}
+
+/* CSS for navbar starts here */
+.navbar{
+    
+    display: flex;
+    margin: 0px 40px 0px 40px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.navbar .logo{
+    font-weight: 600;
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.navbar .logo span{
+    color: crimson;
+}
+/* ul li{
+    display: inline;
+} */
+.nav-items{
+    padding-right: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.nav-items ul{
+    align-items: center;
+}
+.nav-items ul li {
+    display: inline;
+    margin-left: 40px;
+    
+
+}
+.nav-items ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.nav-items ul li a::after{
+    content: '';
+    width: 0px;
+    /* jati width ko anchor tag ca teti width ko nai  */
+    background-color: crimson;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+    transition: 0.3ms;
+}
+.nav-items ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+
+/* CSS for home starts here */
+.home{
+    background: url(../public/assets/images/bg.png);
+    height: 100vh;
+    
+    background-position: center;
+    background-size: cover;
+    margin-right: 7%;
+}
+
+.home{
+    margin-left: 40px;
+    padding-left: 20px;
+}
+.home .p-1{
+    padding-top: 150px;
+    
+    font-size: 26px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+.home .p-2{
+    font-family:  'Catamaran', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+.home span{
+    color: crimson;
+    
+}
+.home .p-3{
+    font-family:  'Catamaran', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+/* CSS for about section starts here */
+.about{
+    margin: 20px 40px 20px 40px;
+    padding: 0px 20px 0px 20px;
+   
+    /* position: relative; */
+}
+.about-me{
+    font-size: large;
+}
+.me{
+    color: white;
+    font: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    position: relative;
+    /* justify-content: space-between; */
+    text-align: center;
+    margin-bottom: 20px;
+    /* padding-left: 37%;
+    margin-left: 25px; */
+    /* added paddin-left and margin-left because tex-align center did not work. */
+}
+.columns{
+    display: flex;
+}
+.column-1{
+    width: 35%;
+    height: 400px;
+}
+.about .column-1 img{
+    border: 2px solid rgb(255, 255, 255) ;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+.column-2 {
+    width: 60%;
+    height: 200px;
+    color: white;
+    padding-left: 30px;
+    
+}   
+.column-2 p{
+    align-items: center;
+    
+    text-align: justify;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px ;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    
+    
+
+
+}
+.edu{
+    background-color: crimson;
+    height: 3px;
+    width: 60px;
+    
+    
+}
+.edu2{
+    background-color: crimson;
+    height: 3px;
+    width: 118px;
+    
+}
+/* .tab-links::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: crimson;
+    left: 0;
+    transition: 0.3ms;
+    bottom: -8px;
+} */
+.tab-links.active-link::after{
+    /* in this context there should be no space between the texts. i.e. before and after the fullstop. 
+    Also notice that here two class names are not of parent and child classes but of the same child class.*/
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px;
+
+}
+.tab-contents ul li span{
+    color: crimson;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.education {
+    padding-left: 30px;
+    margin-left: 30px;
+}
+/* .seperator{
+    display: flex;
+} */
+/* .tab-contents{
+    width: 50%;
+} */
+
+
+/* CSS for Services section starts here */
+.services{
+    margin: 80px 50px 20px 20px;
+    padding: 0px 20px 0px 20px;
+    
+    color: white;
+   
+    /* position: relative; */
+}
+.me{
+    color: white;
+    font: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    position: relative;
+    /* justify-content: space-between; */
+    text-align: center;
+}
+.services-list{
+    display: flex;
+    grid-template-columns: repate(auto-fit, minmax(250,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services h2{
+    color: crimson;
+}
+/* .sercices a{
+    text-decoration: none;
+    color: white;
+} */
+.services-list div{
+    background-color: #4a4545;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    transition: 0.5s transform 0.5s;
+}
+.services.list div i{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.services-list div:hover{
+    background-color: crimson;
+    background: 2px solid white;
+    transform: translateY(-10px); 
+    /* move the box by 10 px */
+}
+
+
+/* CSS for the contact section starts here */
+.contact{
+    margin: 40px 40px 20px 40px;
+    padding: 0px 20px 0px 20px;
+    color: white;
+    display: flex;
+   
+    /* position: relative; */
+}
+.service1{
+    width: 30%;
+/* border:2px solid red; */
+}
+.service1 .service-items{
+    padding-left: 20px;
+}
+.service2{
+    width: 80%;
+    /* border:2px solid red; */
+}
+
+.contact-me{
+    color: white;
+    font: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    position: relative;
+    /* justify-content: space-between; */
+    
+    margin-bottom: 20px;
+}
+
+
+.fa-paper-plane {
+    margin-right: 10px;
+    color: crimson;
+}
+.fa-mobile-retro{
+    margin-right: 14px;
+    color: crimson;
+}
+.your-name{
+    background-color: rgb(60, 57, 57);
+    color: white;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 800px;
+}
+.your-name::placeholder{
+    padding:10px
+}
+.your-email::placeholder{
+    padding:10px
+}
+.your-message::placeholder{
+    padding:10px
+}
+.your-email{
+    background-color: rgb(60, 57, 57);
+    color: white;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 800px;}
+.your-message{
+    background-color: rgb(60, 57, 57);
+    color: white;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 800px;}
+
+.submit-message{
+    background-color: crimson;
+    height: 35px;
+    width: 75px;
+    color: white;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* css for portfolio or my works starts here */
+
+.lists{
+    display: flex;
+    color: white;
+    
+}
+/* .inventory{
+    background-color: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+} */
+
+/* CSS for mydesign starts here */
+.portfolio{
+    margin: 20px 40px 20px 40px;
+}
+.portfolio .lists .work1{
+   margin: 20px;
+   
+
+}
+.portfolio .lists .work2{
+    margin: 20px;
+
+}
+.portfolio .lists .work3{
+    margin: 20px;
+
+}
+.inventory span b{
+    color: crimson;
+}
+.work1 img{
+    /* border-radius: 2px solid white;  */
+    transition: transform 0.5s;
+    
+}
+.work1:hover img{
+    transform: scale(1.1 );
+}
+.work3 img{
+    transition: transform 0.5s;
+}
+.work3:hover img{
+    transform: scale(1.1 );
+}
+
+.work2 img{
+    transition: transform 0.5s;
+}
+.work2:hover img{
+    transform: scale(1.1 );
+}
+
